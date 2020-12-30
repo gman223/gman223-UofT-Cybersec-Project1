@@ -32,3 +32,14 @@ The configuration details of each machine may be found below.
 | Web 3  | Collects DVWA Logs | 10.0.0.10                   | Linux            |
 | LB_1   | Load Balancer      | 104.42.227.147              | Linux            |
 | ELK_VM | Running ELK Stack  | 40.121.7.30<br><br>10.1.0.4 | Linux            |
+
+### Access Policies
+
+The machines on the internal network are not exposed to the public Internet. 
+
+Only the Jbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+196.247.57.68
+
+Machines within the network can only be accessed by Jbox.
+
+A summary of the access policies in place can be found in the table below.
