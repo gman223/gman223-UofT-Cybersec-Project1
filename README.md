@@ -31,7 +31,7 @@ The configuration details of each machine may be found below.
 | Web 2  | Collects DVWA Logs | 10.0.0.6                    | Linux            |
 | Web 3  | Collects DVWA Logs | 10.0.0.10                   | Linux            |
 | LB_1   | Load Balancer      | 104.42.227.147              | Linux            |
-| ELK_VM | Running ELK Stack  | 40.121.7.30<br><br>10.1.0.4 | Linux            |
+| ELK_VM | Running ELK Stack  | 40.121.7.30<br>10.1.0.4 | Linux            |
 
 ### Access Policies
 
