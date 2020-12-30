@@ -38,6 +38,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+
 196.247.57.68
 
 Machines within the network can only be accessed by Jbox.
