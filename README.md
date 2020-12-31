@@ -69,8 +69,8 @@ The playbook implements the following tasks:
 - **Install Docker.io**: Installs Docker onto target machine.
 - **Install Python pip3/Install Docker Python Module**: Installs Python modules onto target machine.
 - **Enable Docker services on startup**: Enables docker to run on server startup.
-- **Increase virtual memory/Use more memory**: Increases the maximum available memory to the ELK container
-- **Download and launch a docker elk container**:  Downloads and launches an ELK container on targer machine
+- **Increase virtual memory/Use more memory**: Increases the maximum available memory to the ELK container.
+- **Download and launch a docker elk container**:  Downloads and launches an ELK container on target machine and states ports in use.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
