@@ -45,10 +45,18 @@ Machines within the network can only be accessed by Jbox.
 
 A summary of the access policies in place can be found in the table below.
 
-** Internal Private IPs: **
+**Internal Private IPs:**
 10.0.0.4
 10.0.0.5
 10.0.0.6
 10.0.0.10
 10.1.0.4
 
+| Name   | Publicly Accessible | Allowed IP Addresses          |
+|--------|---------------------|-------------------------------|
+| Jbox   | Yes                 | 196.247.57.68<br>Internal IPs |
+| Web 1  | No                  | Internal IPs                  |
+| Web 2  | No                  | Internal IPs                  |
+| Web 3  | No                  | Internal IPs                  |
+| LB_1   | Yes                 | 196.247.57.68<br>Internal IPs |
+| ELK_VM | Yes                 | 10.0.0.4 <br>196.247.57.68    |
