@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![alt text](https://raw.githubusercontent.com/gman223/gman223-UofT-Cybersec-Project1/main/Images/Network%20Map2.jpg "Network Map")
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. [ELK Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/elk-playbook.yml). Alternatively, select portions of the [Filebeat Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/filebeat-playbook.yml) may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. [ELK Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/elk-playbook.yml). Alternatively, select portions of the [Filebeat Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/filebeat-playbook.yml) may be used to install only certain pieces of it, such as Filebeat.
 
 This document contains the following details:
 - Description of the Topology
@@ -21,7 +21,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly redundant, in addition to restricting access to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resouces.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
 
 The configuration details of each machine may be found below.
 | Name   | Function           | IP Address                  | Operating System |
@@ -61,9 +61,9 @@ A summary of the access policies in place can be found in the table below.
 | LB_1   | Yes                 | 196.247.57.68<br>Internal IPs |
 | ELK_VM | Yes                 | 10.0.0.4 <br>196.247.57.68    |
 
-### Elk Configuration
+### ELK Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because once one playbook is created, it can be deployed as many times as needed.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually. Which is advantageous because, once one playbook is created, it can be deployed as many times as needed.
 
 The playbook implements the following tasks:
 - **Install Docker.io**: Installs Docker onto target machine.
@@ -90,14 +90,14 @@ These Beats allow us to collect the following information from each machine:
 
 **Filebeat**: This beat collects log information from the designated servers. Will be able to sort and view information such as attempted or failed logins.
 
-**Metricbeat**: This beat collects system resouce information from the designated servers (CPU%,MEM& etc.). If there is a sharp rise in resource usage this could be indicative of a DOS attack.
+**Metricbeat**: This beat collects system resource information from the designated servers (CPU%, MEM&, etc.). If there is a sharp rise in resource usage this could be indicative of a DOS attack.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the [ELK Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/elk-playbook.yml) to your ansible container.
-- Update the ansible host file to include the private IP of your ELK VM
+- Copy the [ELK Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/elk-playbook.yml) to your Ansible container.
+- Update the Ansible host file to include the private IP of your ELK VM
 - Run the playbook, and navigate to `http://{your ELK VM Public IP}:5601/app/kibana` to check the installation worked as expected.
 
 
