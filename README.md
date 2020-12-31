@@ -75,3 +75,29 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![ELK Instance](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Images/elk-running.JPG)
+
+### Target Machines & Beats
+This ELK server is configured to monitor the following machines:
+- 10.0.0.5 (Web 1)
+- 10.0.0.6 (Web 2)
+- 10.0.0.10 (Web 3)
+
+We have installed the following Beats on these machines:
+- Filebeats
+- Metricbeats
+
+These Beats allow us to collect the following information from each machine:
+
+**Filebeat**: This beat collects log information from the designated servers. Will be able to sort and view information such as attempted or failed logins.
+
+**Metricbeat**: This beat collects system resouce information from the designated servers (CPU%,MEM& etc.). If there is a sharp rise in resource usage this could be indicative of a DOS attack.
+
+### Using the Playbook
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+
+SSH into the control node and follow the steps below:
+- Copy the [ELK Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/elk-playbook.yml) to your ansible container.
+- Update the ansible host file to include the private IP of your ELK VM
+- Run the playbook, and navigate to http://{your ELK VM Public IP}:5601/app/kibana to check the installation worked as expected
+
+
