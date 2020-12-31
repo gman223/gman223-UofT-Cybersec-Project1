@@ -60,3 +60,18 @@ A summary of the access policies in place can be found in the table below.
 | Web 3  | No                  | Internal IPs                  |
 | LB_1   | Yes                 | 196.247.57.68<br>Internal IPs |
 | ELK_VM | Yes                 | 10.0.0.4 <br>196.247.57.68    |
+
+### Elk Configuration
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because once one playbook is created, it can be deployed as many times as needed.
+
+The playbook implements the following tasks:
+- **Install Docker.io**: Installs Docker onto target machine.
+- **Install Python pip3/Install Docker Python Module**: Installs Python modules onto target machine.
+- **Enable Docker services on startup**: Enables docker to run on server startup.
+- **Increase virtual memory/Use more memory**: Increases the maximum available memory to the ELK container
+- **Download and launch a docker elk container**:  Downloads and launches an ELK container on targer machine
+
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+
+!(https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Images/elk-running.JPG)
