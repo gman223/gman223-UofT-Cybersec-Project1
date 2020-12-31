@@ -74,4 +74,4 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-!(https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Images/elk-running.JPG)
+![ELK Instance](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Images/elk-running.JPG)
