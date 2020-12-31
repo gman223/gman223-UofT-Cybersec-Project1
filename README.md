@@ -90,7 +90,7 @@ These Beats allow us to collect the following information from each machine:
 
 **Filebeat**: This beat collects log information from the designated servers. Will be able to sort and view information such as attempted or failed logins.
 
-**Metricbeat**: This beat collects system resource information from the designated servers (CPU%, MEM&, etc.). If there is a sharp rise in resource usage this could be indicative of a DOS attack.
+**Metricbeat**: This beat collects system resource information from the designated servers (CPU%, MEM%, etc.). If there is a sharp rise in resource usage this could be indicative of a DOS attack.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -98,6 +98,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the [ELK Playbook](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Files/elk-playbook.yml) to your Ansible container.
 - Update the Ansible host file to include the private IP of your ELK VM
-- Run the playbook, and navigate to `http://{your ELK VM Public IP}:5601/app/kibana` to check the installation worked as expected.
+- Run the playbook, and navigate to `http://{your ELK VM Public IP}:5601/app/kibana` to check that the installation worked as expected.
 
 
