@@ -41,7 +41,7 @@ Only the Jbox, Load Balancer (LB_1) and ELK_VM machine can accept connections fr
 
 196.247.57.68
 
-Machines within the network can only be accessed by Jbox.
+Machines within the internal network can only be accessed by Jbox.
 
 A summary of the access policies in place can be found in the table below.
 
