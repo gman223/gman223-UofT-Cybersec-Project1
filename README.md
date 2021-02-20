@@ -72,6 +72,32 @@ The playbook implements the following tasks:
 - **Increase virtual memory/Use more memory**: Increases the maximum available memory to the ELK container.
 - **Download and launch a docker elk container**:  Downloads and launches an ELK container on target machine and states ports in use.
 
+**Using `nano`, update the hosts files in /etc/ansible to include:
+
+Note: Names of Virtual Machines must correspond with the hosts in the .yml file.
+This is how you will specify which machine to install the ELK server on versus which to install Filebeat on.
+`[webservers]
+10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+
+[elk]
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3`
+Update the *ansible.cfg* to include:
+
+Note: ansible.cfg is a User config file, which overrides the default config if present.
+`remote_user = ansible`
+Update the filebeat-config.yml file to include:
+
+At line 1106:
+`hosts: ["10.1.0.4:9200"]
+username: "elastic"
+password: "changeme" 
+At line 1806:
+host: "10.1.0.4:5601"`
+Run the playbook
+
+ansible-playbook /etc/ansible/elk.yml
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![ELK Instance](https://github.com/gman223/gman223-UofT-Cybersec-Project1/blob/main/Images/elk-running.JPG)
