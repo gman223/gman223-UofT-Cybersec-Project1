@@ -77,11 +77,11 @@ The playbook implements the following tasks:
 Note: Names of Virtual Machines must correspond with the hosts in the .yml file.
 This is how you will specify which machine to install the ELK server on versus which to install Filebeat on.<br>
 
-``[webservers] 
+[webservers] 
 10.0.0.5 ansible_python_interpreter=/usr/bin/python3<br>
 10.0.0.7 ansible_python_interpreter=/usr/bin/python3<br>
 [elk] <br>
-10.1.0.4 ansible_python_interpreter=/usr/bin/python3``
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
 
 Update the *ansible.cfg* to include:
@@ -92,11 +92,11 @@ Note: ansible.cfg is a User config file, which overrides the default config if p
 Update the filebeat-config.yml file to include:
 
 At line 1106:<br>
-`hosts: ["10.1.0.4:9200"]
+hosts: ["10.1.0.4:9200"]
 username: "elastic"
 password: "changeme" 
 At line 1806:
-host: "10.1.0.4:5601"`
+host: "10.1.0.4:5601"
 Run the playbook
 
 ansible-playbook /etc/ansible/elk.yml
